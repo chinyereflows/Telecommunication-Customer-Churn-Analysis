@@ -28,6 +28,9 @@ The dataset was loaded into Power Query to begin the ETL (Extract, Transform, Lo
 - Internet Service: Similar text standardization was applied "fiber" was corrected to "Fiber" to maintain consistent categorization.
 - Monthly Charge & Satisfaction Score: Blank cells in both columns were filled with their respective column averages to preserve dataset size and ensure complete records for analysis. This was implemented using the formula:
   =if [monthly_charge] = null then List.Average(List.RemoveNulls([monthly_charge])) else [monthly_charge]
+
+  <img width="1365" height="594" alt="telco_analysis_pq2" src="https://github.com/user-attachments/assets/8f5c2dec-7a90-47a7-8228-e4f2795c478a" />
+
 ### Feature Engineering
 Conditional columns were created to group customers into meaningful segments for analysis:
 - Tenure Group (based on tenure in months)
